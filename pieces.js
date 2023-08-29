@@ -121,5 +121,13 @@ boutonFiltrerDesc.addEventListener('click',function() {
          });
          console.log(piecesFiltrees);
     }); 
-
-
+//Parcourir la liste des pièces avec une boucle for.
+//Supprimer les noms avec la fonction splice.
+const noms = pieces.map((piece) =>  piece.nom);
+   
+for (let i =  pieces.length -1;i >=0; i--){
+    if(pieces[i].prix >35){
+        noms.splice(i, 1);
+    }
+}
+//af
