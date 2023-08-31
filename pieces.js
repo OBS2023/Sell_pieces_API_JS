@@ -231,3 +231,12 @@ boutonFilter.addEventListener("click", function () {
     genererPieces(piecesFiltrees);
 });
 
+const inputPrixMax = document.querySelector('#prix-max');
+inputPrixMax.addEventListener('input', function(){
+    const piecesFiltrees = pieces.filter((piece) => piece.prix <= inputPrixMax.value);
+    
+    document.querySelector(".fiches").innerHTML = "";
+    genererPieces(piecesFiltrees);
+   
+});
+
